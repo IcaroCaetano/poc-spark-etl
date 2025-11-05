@@ -132,11 +132,11 @@ df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
 
 ### ✨ What Spark does:
 
-Extraction: reads CSV files in parallel.
+- Extraction: reads CSV files in parallel.
 
-Transformation: executes operations (na.drop, dropDuplicates) across multiple CPU cores.
+- Transformation: executes operations (na.drop, dropDuplicates) across multiple CPU cores.
 
-Loading: saves the result as Parquet in distributed mode.
+- Loading: saves the result as Parquet in distributed mode.
 
 Even on your computer, Spark simulates a local cluster environment, executing tasks in parallel.
 
