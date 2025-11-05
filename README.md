@@ -53,3 +53,20 @@ cd poc-spark-etl
 python -m venv venv
 venv\Scripts\activate
 ````
+
+###🔹 3. Install dependencies
+
+````
+pip install -r requirements.txt
+Contents of requirements.txt:
+
+pyspark
+pandas
+pyarrow
+````
+
+###🔹 4. Run the ETL locally
+
+````
+py src/main/etl_job.py
+````
