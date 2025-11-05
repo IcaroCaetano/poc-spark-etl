@@ -4,24 +4,27 @@ Repositório de prova de conceito para estudar Apache Spark com Python (PySpark)
 
 Estrutura do projeto:
 
+````
 poc-spark-etl/
 │
-├── data/                         # Onde ficarão os arquivos de entrada e saída (CSV, JSON, Parquet etc.)
+├── data/                         # Where will the input and output files (CSV, JSON, Parquet, etc.) be located?
 │   ├── input/
 │   └── output/
 │
 ├── src/
 │   ├── main/
-│   │   └── etl_job.py            # Script principal ETL
+│   │   └── etl_job.py            # Main ETL script
 │   └── utils/
-│       └── spark_session.py      # Função para criar a SparkSession
+│       └── spark_session.py      # Function to create the SparkSession
 │
 ├── notebooks/
-│   └── exploratory.ipynb         # (Opcional) Para testes no Jupyter Notebook
+│   └── exploratory.ipynb         # (Optional) For testing in Jupyter Notebook
 │
-├── requirements.txt              # Dependências Python
+├── requirements.txt              # Python Dependencies
 ├── .gitignore
 └── README.md
+
+````
 
 Dependências
 pyspark
