@@ -177,3 +177,20 @@ Resultados gravados em Parquet/CSV/DB, etc.
 ## 💾 Exemplo de dados de entrada
 
 Arquivo: data/input/sample_data.csv
+
+````
+id,name,age,city
+1,Ana,25,São Paulo
+2,Bruno,30,Rio de Janeiro
+3,Carlos,28,Belo Horizonte
+4,Ana,25,São Paulo
+5,,27,Curitiba
+````
+
+Após a execução, o Spark irá:
+
+- Remover registros duplicados.
+
+- Remover linhas com valores nulos.
+
+- Salvar a saída limpa como *Parquet* em data/output/cleaned_data.parquet.
