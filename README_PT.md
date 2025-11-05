@@ -152,3 +152,28 @@ Ao instalar o PySpark com:
 ````
 pip install pyspark
 ````
+Ele instala o *Apache Spark* completo dentro da sua instalação *Python*, normalmente em:
+
+````
+C:\Users\<seu-usuario>\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyspark\
+````
+
+Ou seja, você já tem o Spark funcional dentro do seu ambiente Python — não é necessário baixar o binário separadamente para rodar localmente.
+
+## 🧩 Resumo visual
+
+````
+Python script (etl_job.py)
+        ↓
+PySpark API (pyspark.sql, pyspark.ml, etc.)
+        ↓
+SparkSession → inicializa o motor Apache Spark
+        ↓
+Spark executa transformações (RDD/DataFrame) na JVM
+        ↓
+Resultados gravados em Parquet/CSV/DB, etc.
+````
+
+## 💾 Exemplo de dados de entrada
+
+Arquivo: data/input/sample_data.csv
