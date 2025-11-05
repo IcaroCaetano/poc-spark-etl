@@ -34,10 +34,15 @@ pyarrow
 Como rodar (local)
 1. Crie e ative um ambiente virtual (recomendado):
 
+````
 python -m venv .venv
+
 source .venv/bin/activate  # macOS / Linux
+
 .venv\Scripts\activate     # Windows
+
 pip install -r requirements.txt
+````
 
 2. Coloque os dados de entrada em `data/input/` (ex.: `sample_data.csv` já fornecido).
 
