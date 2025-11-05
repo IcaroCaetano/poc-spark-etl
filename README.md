@@ -159,14 +159,25 @@ In other words, you already have Spark working within your Python environment—
 
 ````
 Python script (etl_job.py)
-
 ↓
 PySpark API (pyspark.sql, pyspark.ml, etc.)
-
 ↓
 SparkSession → initializes the Apache Spark engine
+↓
+Spark executes transformations (RDD/DataFrame) in the JVM
+↓
+Results saved to Parquet/CSV/DB, etc.
+````
 
-↓ Spark executes transformations (RDD/DataFrame) in the JVM
+## 💾 Example of input data
 
-↓ Results saved to Parquet/CSV/DB, etc.
+File: data/input/sample_data.csv
+
+````
+id,name,age,city
+1,Ana,25,São Paulo
+2,Bruno,30,Rio de Janeiro
+3,Carlos,28,Belo Horizonte
+4,Ana,25,São Paulo
+5,,27,Curitiba
 ````
