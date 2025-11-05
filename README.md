@@ -73,13 +73,13 @@ py src/main/etl_job.py
 
  ✅ If everything is configured correctly, Spark will start and process the file data/input/sample_data.csv, generating clean output in data/output/cleaned_data.parquet.
 
-## 🔍 What is Apache Spark in the context of your project?
+### 🔍 What is Apache Spark in the context of your project?
 
 Apache Spark is the distributed processing engine responsible for executing your ETL code in parallel.
 
 In the project, you don't run Spark directly: you interact with it through PySpark, the official Spark Python API.
 
-## 👉 PySpark acts as a bridge between Python and the Spark core (written in Scala/Java).
+### 👉 PySpark acts as a bridge between Python and the Spark core (written in Scala/Java).
 
 When you run the script:
 
@@ -88,3 +88,27 @@ py src/main/etl_job.py
 ````
 
 PySpark:
+
+1 - Initializes the Apache Spark engine within the JVM (Java Virtual Machine).
+
+2 - Creates a SparkContext that coordinates the processing.
+
+3 - Executes transformations and actions in parallel, even in local mode.
+
+### ⚡ Where Spark "enters" your code
+Spark is initialized when you create a SparkSession, as in the snippet below:
+
+````
+from pyspark.sql import SparkSession
+
+spark = (
+SparkSession.builder
+
+.appName("ETLExample")
+
+.master("local[*]")
+
+.getOrCreate()
+
+)
+````
