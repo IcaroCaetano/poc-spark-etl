@@ -28,7 +28,7 @@ poc-spark-etl/
 
 ## ⚙️ Local Installation and Execution
 
-###🔹 Prerequisites
+### 🔹 Prerequisites
 
 - Windows 11
 
@@ -40,21 +40,21 @@ poc-spark-etl/
 
 Check with:
 
-###🔹 1. Clone the repository
+### 🔹 1. Clone the repository
 
 ````
 git clone https://github.com/IcaroCaetano/poc-spark-etl.git
 cd poc-spark-etl
 ````
 
-###🔹 2. Create and activate the virtual environment (optional, but recommended)
+### 🔹 2. Create and activate the virtual environment (optional, but recommended)
 
 ````
 python -m venv venv
 venv\Scripts\activate
 ````
 
-###🔹 3. Install dependencies
+### 🔹 3. Install dependencies
 
 ````
 pip install -r requirements.txt
@@ -65,7 +65,7 @@ pandas
 pyarrow
 ````
 
-###🔹 4. Run the ETL locally
+### 🔹 4. Run the ETL locally
 
 ````
 py src/main/etl_job.py
