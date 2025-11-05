@@ -25,3 +25,17 @@ poc-spark-etl/
 ├── .gitignore
 └── README.md
 ````
+
+## ⚙️ Local Installation and Execution
+
+###🔹 Prerequisites
+
+- Windows 11
+
+- Java 17 (installed and configured)
+
+- Python 3.13+
+
+- pip installed
+
+Check with:
