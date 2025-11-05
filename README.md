@@ -39,3 +39,17 @@ poc-spark-etl/
 - pip installed
 
 Check with:
+
+###🔹 1. Clone the repository
+
+````
+git clone https://github.com/IcaroCaetano/poc-spark-etl.git
+cd poc-spark-etl
+````
+
+###🔹 2. Create and activate the virtual environment (optional, but recommended)
+
+````
+python -m venv venv
+venv\Scripts\activate
+````
