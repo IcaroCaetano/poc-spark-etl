@@ -3,16 +3,16 @@ from src.utils.spark_session import create_spark_session
 def main():
     spark = create_spark_session("ETLExample")
 
-    # 1️⃣ Extração: ler CSV
+    # Extraction: Read CSV
     df = spark.read.option("header", True).csv("data/input/sample_data.csv")
 
-    # 2️⃣ Transformação: limpar e manipular dados
+    # Transformation: cleaning and manipulating data
     df_clean = df.na.drop().dropDuplicates()
 
-    # 3️⃣ Carga: salvar resultado como Parquet
+    # Load: save result as Parquet
     df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
 
-    print("✅ ETL concluído com sucesso!")
+    print("✅ ETL completed successfully.!")
     spark.stop()
 
 if __name__ == "__main__":
