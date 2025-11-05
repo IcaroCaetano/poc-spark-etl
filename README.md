@@ -181,3 +181,11 @@ id,name,age,city
 4,Ana,25,São Paulo
 5,,27,Curitiba
 ````
+
+After execution, Spark will:
+
+- Remove duplicate records.
+
+- Remove rows with null values.
+
+- Save the clean output as Parquet in data/output/cleaned_data.parquet.
