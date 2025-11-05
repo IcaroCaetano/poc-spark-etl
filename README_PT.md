@@ -28,7 +28,7 @@ poc-spark-etl/
 ````
 
 ## ⚙️ Instalação e execução local
-###🔹 Pré-requisitos
+### 🔹 Pré-requisitos
 
 - Windows 11
 
