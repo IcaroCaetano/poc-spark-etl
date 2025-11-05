@@ -129,3 +129,20 @@ df = spark.read.option("header", True).csv("data/input/sample_data.csv")
 df_clean = df.na.drop().dropDuplicates()
 df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
 ````
+
+### ✨ What Spark does:
+
+Extraction: reads CSV files in parallel.
+
+Transformation: executes operations (na.drop, dropDuplicates) across multiple CPU cores.
+
+Loading: saves the result as Parquet in distributed mode.
+
+Even on your computer, Spark simulates a local cluster environment, executing tasks in parallel.
+
+## 🧠 Where Spark “lives” in your environment
+By installing PySpark with:
+
+````
+pip install pyspark
+````
