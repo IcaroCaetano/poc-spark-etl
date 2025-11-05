@@ -126,3 +126,29 @@ spark = (
 
 A partir daí, todas as operações (como spark.read.csv(), df.write.parquet(), etc.) são executadas pelo motor distribuído do Apache Spark, e não pelo Python puro.
 
+## 🧩 Exemplo de como o Spark está processando seus dados
+
+Trecho do etl_job.py:
+
+````
+
+df = spark.read.option("header", True).csv("data/input/sample_data.csv")
+df_clean = df.na.drop().dropDuplicates()
+df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
+````
+
+✨ O que o Spark faz:
+- Extração: lê o CSV de forma paralela.
+
+- Transformação: executa operações (na.drop, dropDuplicates) em vários núcleos da CPU.
+
+- Carga: grava o resultado como Parquet em modo distribuído.
+
+Mesmo no seu computador, o Spark simula um ambiente de cluster local, executando tarefas em paralelo.
+
+## 🧠 Onde o Spark “mora” no seu ambiente
+Ao instalar o PySpark com:
+
+````
+pip install pyspark
+````
