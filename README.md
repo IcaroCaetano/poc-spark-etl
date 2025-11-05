@@ -113,3 +113,19 @@ SparkSession.builder
 )
 ````
 
+- appName("ETLExample"): Name of the Spark application.
+
+- master("local[*]"): Uses all available CPU cores as Spark "executors".
+
+- getOrCreate(): Initializes Spark locally.
+
+From then on, all operations (such as spark.read.csv(), df.write.parquet(), etc.) are executed by the Apache Spark distributed engine, not by pure Python.
+
+### 🧩 Example of how Spark is processing your data
+Excerpt from etl_job.py:
+
+````
+df = spark.read.option("header", True).csv("data/input/sample_data.csv")
+df_clean = df.na.drop().dropDuplicates()
+df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
+````
