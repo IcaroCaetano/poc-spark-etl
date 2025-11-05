@@ -70,3 +70,21 @@ pyarrow
 ````
 py src/main/etl_job.py
 ````
+
+ ✅ If everything is configured correctly, Spark will start and process the file data/input/sample_data.csv, generating clean output in data/output/cleaned_data.parquet.
+
+## 🔍 What is Apache Spark in the context of your project?
+
+Apache Spark is the distributed processing engine responsible for executing your ETL code in parallel.
+
+In the project, you don't run Spark directly: you interact with it through PySpark, the official Spark Python API.
+
+## 👉 PySpark acts as a bridge between Python and the Spark core (written in Scala/Java).
+
+When you run the script:
+
+````
+py src/main/etl_job.py
+````
+
+PySpark:
