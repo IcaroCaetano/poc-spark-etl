@@ -68,7 +68,7 @@ pyarrow
 ### 🔹 4. Run the ETL locally
 
 ````
-py src/main/etl_job.py
+py -m src.main.etl_job
 ````
 
  ✅ If everything is configured correctly, Spark will start and process the file data/input/sample_data.csv, generating clean output in data/output/cleaned_data.parquet.
