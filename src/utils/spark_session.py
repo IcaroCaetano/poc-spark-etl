@@ -1,7 +1,7 @@
 from pyspark import SparkConf
 from pyspark.sql import SparkSession
 
-#vThis function creates and configures a Spark session named "SparkETL" (by default).
+# This function creates and configures a Spark session named "SparkETL" (by default).
 # It runs Spark locally using all CPU cores (local[*]) and sets Java options needed for compatibility.
 # Finally, it returns the created Spark session to be used in the ETL process.
 def create_spark_session(app_name: str = "SparkETL"):
