@@ -88,7 +88,7 @@ py -m src.main.etl_job
 Usando sbt (você pode instalá-lo com Chocolatey: choco install sbt)
 ````
 cd poc-spark-etl
-sbt "runMain ETLJob"
+sbt "runMain com.projecticaro.etl.ETLJob"
 ````
 
 ✅ Se tudo estiver configurado corretamente, o Spark iniciará e processará o arquivo data/input/sample_data.csv, gerando uma saída limpa em data/output/cleaned_data.parquet.
