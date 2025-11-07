@@ -4,6 +4,9 @@ import org.apache.spark.sql.SparkSession
 
 object ETLJob {
   def main(args: Array[String]): Unit = {
+    // Here Spark is initialized.
+    // It creates the distributed engine that will execute your transformations and actions in parallel.
+    // The location[*] indicates that it will use all the cores of your computer.
     val spark = SparkSession.builder()
       .appName("ETLProjectIcaroScala")
       .master("local[*]")
