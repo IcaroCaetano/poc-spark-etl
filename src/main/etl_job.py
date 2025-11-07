@@ -11,6 +11,8 @@ def main():
     # Transformation: cleaning and manipulating data
     df_clean = df.na.drop().dropDuplicates()
 
+    # saves the cleaned data as a Parquet file in the folder data/output/cleaned_data.parquet.
+    # The option "overwrite" means it will replace any existing file in that location.
     # Load: save result as Parquet
     df_clean.write.mode("overwrite").parquet("data/output/cleaned_data.parquet")
 
