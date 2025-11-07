@@ -67,8 +67,17 @@ pyarrow
 
 ### 🔹 4. Run the ETL locally
 
+#### ▶️ Python (PySpark)
 ````
 py -m src.main.etl_job
+````
+
+#### ▶️ Scala (native Spark)
+
+Using sbt (you can install it with Chocolatey: choco install sbt)
+````
+cd poc-spark-etl
+sbt "runMain ETLJob"
 ````
 
  ✅ If everything is configured correctly, Spark will start and process the file data/input/sample_data.csv, generating clean output in data/output/cleaned_data.parquet.
