@@ -6,6 +6,8 @@ def main():
     # Extraction: Read CSV
     df = spark.read.option("header", True).csv("data/input/sample_data.csv")
 
+    # Cleans the data by removing any rows that contain null (missing) values and then removing duplicate rows.
+    # df_clean will contain only unique and complete records with no missing data.
     # Transformation: cleaning and manipulating data
     df_clean = df.na.drop().dropDuplicates()
 
