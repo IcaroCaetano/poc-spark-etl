@@ -9,21 +9,22 @@ No contexto desta POC, o Spark é usado como motor principal de processamento ET
 poc-spark-etl/
 │
 ├── data/
-│   ├── input/                    # Arquivos de entrada (CSV, JSON, etc.)
+│   ├── input/
 │   │   └── sample_data.csv
-│   └── output/                   # Dados transformados gerados pelo Spark
+│   └── output/
 │
 ├── src/
 │   ├── main/
-│   │   └── etl_job.py            # Script principal de ETL
-│   └── utils/
-│       └── spark_session.py      # Criação da SparkSession (inicialização do Spark)
+│   │   ├── python/
+│   │   │   ├── etl_job.py
+│   │   │   └── utils/
+│   │   │       └── spark_session.py
+│   │   │
+│   │   └── scala/
+│   │        └── ETLJob.scala
 │
-├── notebooks/
-│   └── exploratory.ipynb         # (Opcional) Análises exploratórias com Spark
-│
-├── requirements.txt              # Dependências Python
-├── .gitignore
+├── build.sbt              
+├── requirements.txt        
 └── README.md
 ````
 
