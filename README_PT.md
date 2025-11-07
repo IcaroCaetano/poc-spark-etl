@@ -21,7 +21,8 @@ poc-spark-etl/
 │   │   │       └── spark_session.py
 │   │   │
 │   │   └── scala/
-│   │        └── ETLJob.scala
+│   │       └── com/projecticaro/etl/
+│   │           └── ETLJob.scala
 │
 ├── build.sbt              
 ├── requirements.txt        
